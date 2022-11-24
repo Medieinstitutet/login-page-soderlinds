@@ -65,6 +65,7 @@ function showPage3(){
     document.querySelector("#page4").style.display = "none";
 
         let user = localStorage.getItem("username");
+        
 
     loggedIn.innerText = "Welcome " + user.charAt(0).toUpperCase() + user.slice(1) +"!"; 
 }
@@ -97,14 +98,13 @@ function createAccount() {
       if (registerUsername == objPeople[i].username) {
         alert('That username is already taken, please choose another')
     return; 
-      } 
-        }
-      
+      }   else {
+
       alert('User created, you can nog log in!');
       objPeople.push(newUser);
-      localStorage.getItem ("username");
-      localStorage.setItem ("username", registerUsername);
+      localStorage.getItem("username");
+      localStorage.setItem("username", registerUsername);
+      return; 
     }
-
-
-
+}
+}
