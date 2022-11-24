@@ -1,0 +1,74 @@
+
+<html lang="en">
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+      <link rel="stylesheet" href="style.css" type="text/css">
+      <title>Login form</title>
+    </head>
+    <body>
+      <div id="page1"><h3></h3><button class="menu" onclick="showPage1()">Home</button><button class="menu" onclick="showPage2()">Login</button></div>
+      <div id="page2">
+        <button class="menu" onclick="showPage1()">Home</button><button class="menu" onclick="showPage2()">Login</button>
+          <div class="container">
+            <h2>Login</h2>
+            <form action="">
+             <div class="form-item">
+             <span class="material-icons-outlined">
+              account_circle
+             </span>
+            <input type="text" name="user" id="user" placeholder="Username">
+            </div>
+    
+           <div class="form-item">
+            <span class="material-icons-outlined">
+              lock
+            </span>
+            <input type="password" name="pass" id="pass" placeholder="Password">
+          </div>
+    
+          <button type="sumbit" id="loginbutton" onclick="getInfo()">LOGIN</button>
+    
+          </div>
+          <div class="options">
+          <p>New User? <a href="#" onclick="showPage4()"> Create an Account</a></p>
+        </div>
+        </form>
+      </div>
+    </div>
+    <div id="page3"><h3 id="loggedIn"></h3><button class="menu" onclick="logOut()">Logout</button></div></div>
+    
+    <div id="page4"><button class="menu" onclick="showPage1()">Home</button>
+      <button class="menu" onclick="showPage2()">Login</button>
+      <div class="container">
+        <h2>Create account</h2>
+        <form action="">
+         <div class="form-item">
+         <span class="material-icons-outlined">
+          account_circle
+         </span>
+        <input type="text" name="newuser" id="newuser" placeholder="Username">
+        </div>
+
+       <div class="form-item">
+        <span class="material-icons-outlined">
+          lock
+        </span>
+        <input type="password" name="newpass" id="newpass" placeholder="Password">
+      </div>
+      <button type="sumbit" id="loginbutton" onclick="createAccount()">Create account</button>
+    </div>
+    </div>
+    <div class="logotype">
+      <h1 class="logo">LoginPage</h1>
+    </div>
+    <footer>
+
+    </footer>
+
+    </body>
+    <script src="script.js"></script>
+    </html>
