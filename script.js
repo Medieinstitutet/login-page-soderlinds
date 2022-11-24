@@ -100,7 +100,7 @@ function createAccount() {
     return; 
       }   else {
 
-      alert('User created, you can nog log in!');
+      alert('User created, you can now log in!');
       objPeople.push(newUser);
       localStorage.getItem("username");
       localStorage.setItem("username", registerUsername);
