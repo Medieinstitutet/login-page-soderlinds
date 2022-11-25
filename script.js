@@ -41,6 +41,8 @@ function showPage2(){
         var password = document.getElementById("pass").value
         let inloggad = document.getElementById("loggedIn");
 
+       
+
         var loginSuccess = false;
         
         for(var i = 0; i < objPeople.length; i++) {
@@ -51,6 +53,7 @@ function showPage2(){
                    }
                    if(loginSuccess){
                 localStorage.setItem("username", username)
+                localStorage.setItem("password", password);
                 showPage3();   
             }else {
                  alert("Wrong username or password");
@@ -86,25 +89,27 @@ function createAccount() {
     var registerUsername = document.getElementById("newuser").value
     var registerPassword = document.getElementById("newpass").value
 
-    var newUser = [
+    var newUser = 
         {
       username: registerUsername,
       password: registerPassword
     }
-    ]
+    
 
     for (var i = 0; i < objPeople.length; i++) {
   
       if (registerUsername == objPeople[i].username) {
         alert('That username is already taken, please choose another')
     return; 
-      }   else {
+    }   else {
 
-      alert('User created, you can now log in!');
-      objPeople.push(newUser);
-      localStorage.getItem("username");
-      localStorage.setItem("username", registerUsername);
-      return; 
-    }
+    alert('User created, you can now log in!');
+    let oldUser = localStorage.getItem("username");
+    let oldPassword = localStorage.getItem("password");
+    objPeople.push(newUser);
+    localStorage.setItem("username", registerUsername);
+    localStorage.setItem("password", registerPassword);
+    return; 
+  }
 }
 }
